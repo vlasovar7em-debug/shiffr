@@ -1,0 +1,92 @@
+@font-face {
+    font-family: IstokWeb;
+    src: url("../fonts/IstokWeb-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 32px 97px;
+}
+
+.empty {
+    width: 240px;
+}
+
+.logo {
+    display: flex;
+    gap: 16px;
+}
+
+.logo h1 {
+    font-family: IstokWeb;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contacts {
+    font-family: Inter;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #8e8e8e;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.contacts div {
+    position: relative;
+
+    height: 24px;
+    width: 24px;
+}
+
+.contacts .mail {
+    width: 40px;
+}
+
+.contacts img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contacts img#active {
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.contacts a:hover img#active {
+    opacity: 1;
+}
