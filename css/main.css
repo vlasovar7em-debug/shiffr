@@ -91,11 +91,22 @@ header {
     opacity: 1;
 }
 
+/* MAIN OFFSET */
+
+main {
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
 /*Cards*/
 
 main {
     width: 100%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,15 +122,15 @@ main {
 .card {
     width: 292px;
     height: 316px;
-    
+
     padding: 48px 32px;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
-    border: 3px solid #446DFF;
+    border: 3px solid #446dff;
     border-radius: 30px;
     list-style: none;
 }
@@ -133,7 +144,7 @@ main {
 .card h4 {
     font-size: 20px;
     font-family: Inter;
-    margin-bottom:  16px;
+    margin-bottom: 16px;
     text-align: center;
     font-weight: 400;
 }
@@ -143,17 +154,6 @@ main {
     font-family: Inter;
     text-align: center;
     color: #8e8e8e;
-}
-
-/* MAIN OFFSET */
-
-main {
-    width: 100%;
-    padding-top: 64px;
-    padding-bottom: 120px;
-
-    display: flex;
-    justify-content: center;
 }
 
 /* CARD CONTAINER */
@@ -181,7 +181,7 @@ main {
     flex-direction: column;
     align-items: center;
 
-    border: 3px solid #446DFF;
+    border: 3px solid #446dff;
     border-radius: 32px;
     background: #fff;
 
@@ -261,28 +261,38 @@ main {
 /* TOP BLOCK */
 
 .info__top {
-    display: flex;
-    align-items: center;
-    gap: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
     margin-bottom: 100px;
 }
 
 .info__image img {
-    max-width: 420px;
     width: 100%;
+    height: auto;
 }
 
 /* TEXT */
 
-.info__text h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
+.info_title {
+    margin-bottom: 16px;
 }
 
-.info__text .subtitle {
+.info_title h2 {
     font-size: 16px;
-    color: #8e8e8e;
-    margin-bottom: 24px;
+    font-family: IstokWeb;
+}
+
+.info__title .subtitle {
+    font-size: 12px;
+    font-family: Inter;
+    color: black;
+}
+
+.info__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info__text p {
