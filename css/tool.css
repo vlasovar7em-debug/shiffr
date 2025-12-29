@@ -1,0 +1,100 @@
+/* ===== TOOL PAGE ===== */
+
+.tool {
+    display: flex;
+    gap: 48px;
+    padding: 64px 120px;
+}
+
+/* LEFT MENU */
+
+.tool__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu__item {
+    width: 200px;
+    padding: 14px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+
+    color: #8e8e8e;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu__item img {
+    width: 18px;
+}
+
+.menu__item.active {
+    background: #446dff;
+    border-color: #446dff;
+    color: #fff;
+}
+
+/* RIGHT PANEL */
+
+.tool__panel {
+    flex: 1;
+    max-width: 760px;
+
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #bfbfbf;
+}
+
+.tool__panel h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.panel__subtitle {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-bottom: 32px;
+}
+
+.panel__mode {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.panel__textarea {
+    width: 100%;
+    height: 110px;
+
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #f1f1f1;
+
+    resize: none;
+    margin-bottom: 24px;
+}
+
+.panel__button {
+    display: block;
+    margin: 0 auto 24px;
+
+    padding: 12px 32px;
+    border-radius: 12px;
+    border: none;
+
+    background: #8ea2ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.panel__button:hover {
+    background: #446dff;
+}

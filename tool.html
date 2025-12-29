@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/tool.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML</title>
+    </head>
+    <body>
+        <header>
+            <div class="empty"></div>
+            <div class="logo">
+                <img src="img/Vector (1).svg" alt="Логотип" />
+                <h1>shiffr</h1>
+            </div>
+            <div class="contacts">
+                <a href="#">
+                    <div class="mail">
+                        <img src="img/Email.svg" />
+                        <img id="active" src="img/Email_Active.svg" />
+                    </div>
+                    <p>vlasov.ar7em@gmail.com</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="img/Telegram.svg" />
+                        <img id="active" src="img/Telegram_Active.svg" />
+                    </div>
+                    <p>t.me/helm1k3</p>
+                </a>
+            </div>
+        </header>
+        <main class="tool">
+
+    <!-- LEFT MENU -->
+    <aside class="tool__menu">
+        <button class="menu__item active">
+            <img src="img/base64.svg">
+            Base 64
+        </button>
+
+        <button class="menu__item">
+            <img src="img/md5.svg">
+            MD5
+        </button>
+
+        <button class="menu__item">
+            <img src="img/sha.svg">
+            SHA1
+        </button>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <section class="tool__panel">
+
+        <h2>Base 64</h2>
+        <p class="panel__subtitle">
+            Кодирование и декодирование текста в Base64
+        </p>
+
+        <!-- MODE SWITCH -->
+        <div class="panel__mode">
+            <label>
+                <input type="radio" name="mode" checked>
+                Кодировать
+            </label>
+            <label>
+                <input type="radio" name="mode">
+                Декодировать
+            </label>
+        </div>
+
+        <!-- INPUT -->
+        <textarea
+            class="panel__textarea"
+            placeholder="Введите текст для кодирования..."></textarea>
+
+        <!-- BUTTON -->
+        <button class="panel__button">
+            Преобразовать →
+        </button>
+
+        <!-- OUTPUT -->
+        <textarea
+            class="panel__textarea result"
+            placeholder="Результат появится здесь..."
+            readonly></textarea>
+
+    </section>
+
+</main>
+
+</body>
+</html>

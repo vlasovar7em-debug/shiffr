@@ -1,0 +1,92 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FONTS ===== */
+@font-face {
+    font-family: IstokWeb;
+    src: url("../fonts/IstokWeb-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: Inter;
+    background: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 97px;
+}
+
+.empty {
+    width: 240px;
+}
+
+.logo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: IstokWeb;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* CONTACTS */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #8e8e8e;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.contacts div {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.contacts .mail {
+    width: 40px;
+}
+
+.contacts img {
+    position: absolute;
+    inset: 0;
+}
+
+.contacts img#active {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.contacts a:hover img#active {
+    opacity: 1;
+}
