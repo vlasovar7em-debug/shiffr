@@ -24,73 +24,6 @@ header {
     padding: 32px 97px;
 }
 
-.empty {
-    width: 240px;
-}
-
-.logo {
-    display: flex;
-    gap: 16px;
-}
-
-.logo h1 {
-    font-family: IstokWeb;
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.contacts {
-    font-family: Inter;
-
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.contacts a {
-    text-decoration: none;
-    color: #8e8e8e;
-
-    width: 100%;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-}
-
-.contacts a:hover {
-    text-decoration: underline;
-}
-
-.contacts div {
-    position: relative;
-
-    height: 24px;
-    width: 24px;
-}
-
-.contacts .mail {
-    width: 40px;
-}
-
-.contacts img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.contacts img#active {
-    opacity: 0;
-    transition: all 0.2s;
-}
-
-.contacts a:hover img#active {
-    opacity: 1;
-}
-
 /* MAIN OFFSET */
 
 main {
@@ -100,67 +33,14 @@ main {
 
     display: flex;
     justify-content: center;
-}
-
-/*Cards*/
-
-main {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.card_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 292px;
-    height: 316px;
-
-    padding: 48px 32px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-
-    border: 3px solid #446dff;
-    border-radius: 30px;
-    list-style: none;
-}
-
-.card img {
-    width: 64px;
-    height: auto;
-    margin-bottom: 22px;
-}
-
-.card h4 {
-    font-size: 20px;
-    font-family: Inter;
-    margin-bottom: 16px;
-    text-align: center;
-    font-weight: 400;
-}
-
-.card p {
-    font-size: 14px;
-    font-family: Inter;
-    text-align: center;
-    color: #8e8e8e;
 }
 
 /* CARD CONTAINER */
 
 .card_container {
-    max-width: 1240px;
-    width: 100%;
+    max-width: 1400px;
+    width: fit-content;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -169,10 +49,14 @@ main {
     padding: 0 40px;
 }
 
+.card_container li {
+    list-style: none;
+}
+
 /* CARD */
 
 .card {
-    width: 100%;
+    width: 292px;
     height: 320px;
 
     padding: 48px 32px;
@@ -186,6 +70,8 @@ main {
     background: #fff;
 
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    text-decoration: none;
 }
 
 /* HOVER */
@@ -212,6 +98,7 @@ main {
     text-align: center;
 
     margin-bottom: 16px;
+    color: black;
 }
 
 /* TEXT */
@@ -223,11 +110,23 @@ main {
     color: #8e8e8e;
 }
 
-.card_container > .card:nth-child(5),
-.card_container > .card:nth-child(6) {
+.card_container > li:nth-child(5),
+.card_container > li:nth-child(6) {
     grid-column: span 2;
     justify-self: center;
-    max-width: 300px;
+    max-width: 292px;
+}
+
+@media (max-width: 1400px) {
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card_container > li:nth-child(5),
+    .card_container > li:nth-child(6) {
+        grid-column: span 1;
+        max-width: 292px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -235,10 +134,9 @@ main {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .card_container > .card:nth-child(5),
-    .card_container > .card:nth-child(6) {
+    .card_container > li:nth-child(5),
+    .card_container > li:nth-child(6) {
         grid-column: span 1;
-        max-width: 100%;
     }
 }
 
