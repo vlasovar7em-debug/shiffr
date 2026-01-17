@@ -33,7 +33,37 @@ const tools = {
     },
 };
 
-let currentTool = "base64";
+var url = window.location.href;
+let normalizedUrl = url.substring(url.lastIndexOf("?") + 1);
+const urlParams = new URLSearchParams(normalizedUrl);
+const params = Object.fromEntries(urlParams.entries());
+
+let currentTool = params.crypto;
+menuItems.forEach((item) => {
+    if (item.dataset.type === currentTool) {
+        item.classList.add("active");
+
+        currentTool = item.dataset.type;
+        const tool = tools[currentTool];
+
+        title.textContent = tool.title;
+        desc.textContent = tool.desc;
+
+        input.value = "";
+        output.value = "";
+
+        modeInputs.forEach((i) => {
+            if (i.value === "decode") {
+                i.disabled = !tool.allowDecode;
+                if (!tool.allowDecode) i.checked = false;
+            }
+
+            if (i.value === params.mode) {
+                i.checked = true;
+            }
+        });
+    }
+});
 
 // ===== MENU SWITCH =====
 menuItems.forEach((item) => {
