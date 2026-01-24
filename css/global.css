@@ -79,13 +79,17 @@ a:has(.logo) {
     height: 24px;
 }
 
-.contacts .mail {
-    width: 40px;
-}
-
 .contacts img {
     position: absolute;
     inset: 0;
+
+    width: 24px;
+    height: 24px;
+}
+
+.contacts .mail,
+.contacts .mail img {
+    width: 40px;
 }
 
 .contacts img#active {
