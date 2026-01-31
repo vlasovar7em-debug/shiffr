@@ -81,6 +81,56 @@
                         alt=""
                     />
                 </button>
+
+                <button class="menu__item" data-type="sha256">
+                    <img src="img/sha.png" alt="" />
+                    <span>SHA-256</span>
+                    <img
+                        class="menu__item__image_white"
+                        src="img/sha.svg"
+                        alt=""
+                    />
+                </button>
+
+                <button class="menu__item" data-type="sha512">
+                    <img src="img/sha.png" alt="" />
+                    <span>SHA-512</span>
+                    <img
+                        class="menu__item__image_white"
+                        src="img/sha.svg"
+                        alt=""
+                    />
+                </button>
+
+                <button class="menu__item" data-type="sha3">
+                    <img src="img/sha.png" alt="" />
+                    <span>SHA-3</span>
+                    <img
+                        class="menu__item__image_white"
+                        src="img/sha.svg"
+                        alt=""
+                    />
+                </button>
+
+                <button class="menu__item" data-type="aes">
+                    <img src="img/mda.svg" alt="" />
+                    <span>AES</span>
+                    <img
+                        class="menu__item__image_white"
+                        src="img/mda.svg"
+                        alt=""
+                    />
+                </button>
+
+                <button class="menu__item" data-type="rsa">
+                    <img src="img/инфа.svg" alt="" />
+                    <span>RSA</span>
+                    <img
+                        class="menu__item__image_white"
+                        src="img/инфа.svg"
+                        alt=""
+                    />
+                </button>
             </aside>
 
             <!-- RIGHT PANEL -->
@@ -108,6 +158,9 @@
                     </label>
                 </div>
 
+                <!-- OPTIONS (dynamic) -->
+                <div id="options" class="panel__options"></div>
+
                 <!-- INPUT -->
                 <textarea
                     id="input"
@@ -131,7 +184,7 @@
         </main>
 
         <!-- JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script src="scripts/crypto-js.min.js"></script>
         <script src="scripts/tool.js"></script>
     </body>
 </html>
