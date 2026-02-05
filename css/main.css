@@ -110,12 +110,6 @@ main {
     color: #8e8e8e;
 }
 
-.card_container > li:nth-child(5),
-.card_container > li:nth-child(6) {
-    grid-column: span 2;
-    justify-self: center;
-    max-width: 292px;
-}
 
 @media (max-width: 1400px) {
     .card_container {
